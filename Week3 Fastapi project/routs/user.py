@@ -4,7 +4,7 @@ from typing import List
 
 from database import get_db
 from models.user import User
-from schemas.user import UserCreate, UserResponse
+from schemas.user import UserCreate, UserResponse, UserUpdate
 
 router = APIRouter(prefix="/users", tags=["users"])
 
@@ -18,14 +18,40 @@ def create_user(user: UserCreate, db: Session = Depends(get_db)):
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Username or email already registered"
         )
-
-
     db_user = User(
         username=user.username,
         email=user.email,
         is_active=user.is_active,
     )
     db.add(db_user)
+    db.commit()
+    db.refresh(db_user)
+    return db_user
+
+@router.patch("/{user_id}", response_model=UserResponse)
+def update_user(
+    user_id: int,
+    user_update: UserUpdate,  # يجب تعريف UserUpdate في schemas
+    db: Session = Depends(get_db)
+):
+    db_user = db.query(User).filter(User.id == user_id).first()
+    if not db_user:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    # منع تغيير البريد الإلكتروني إلى بريد موجود مسبقاً (اختياري)
+    if user_update.email is not None:
+        existing_user = db.query(User).filter(
+            User.email == user_update.email,
+            User.id != user_id
+        ).first()
+        if existing_user:
+            raise HTTPException(status_code=400, detail="Email already registered")
+
+    # تحديث الحقول المرسلة فقط
+    update_data = user_update.dict(exclude_unset=True)
+    for key, value in update_data.items():
+        setattr(db_user, key, value)
+
     db.commit()
     db.refresh(db_user)
     return db_user

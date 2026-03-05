@@ -11,3 +11,5 @@ class Project(Base):
     owner_id = Column(Integer, ForeignKey("users.id"))
 
     owner = relationship("User", foreign_keys=[owner_id])
+    # أضف هذه العلاقة للمهام المرتبطة بالمشروع
+    tasks = relationship("Task", back_populates="project")

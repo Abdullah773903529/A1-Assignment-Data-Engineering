@@ -5,12 +5,11 @@ from typing import List
 from database import get_db
 from models.project import Project
 from models.user import User
-from schemas.project import ProjectCreate, ProjectResponse, ProjectWithOwner
+from schemas.project import ProjectCreate, ProjectResponse, ProjectWithOwner, ProjectUpdate
 
 router = APIRouter(prefix="/projects", tags=["projects"])
 
 
-# إنشاء مشروع جديد
 @router.post("/", response_model=ProjectResponse, status_code=status.HTTP_201_CREATED)
 def create_project(project: ProjectCreate, db: Session = Depends(get_db)):
     user = db.query(User).filter(User.id == project.owner_id).first()
@@ -19,6 +18,30 @@ def create_project(project: ProjectCreate, db: Session = Depends(get_db)):
 
     db_project = Project(**project.dict())
     db.add(db_project)
+    db.commit()
+    db.refresh(db_project)
+    return db_project
+
+@router.patch("/{project_id}", response_model=ProjectResponse)
+def update_project(
+    project_id: int,
+    project_update: ProjectUpdate,
+    db: Session = Depends(get_db)
+):
+    db_project = db.query(Project).filter(Project.id == project_id).first()
+    if not db_project:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+
+    if project_update.owner_id is not None:
+        user = db.query(User).filter(User.id == project_update.owner_id).first()
+        if not user:
+            raise HTTPException(status_code=404, detail="Owner not found")
+
+    update_data = project_update.dict(exclude_unset=True)
+    for key, value in update_data.items():
+        setattr(db_project, key, value)
+
     db.commit()
     db.refresh(db_project)
     return db_project

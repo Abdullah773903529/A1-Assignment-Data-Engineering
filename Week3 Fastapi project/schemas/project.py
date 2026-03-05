@@ -8,6 +8,11 @@ class ProjectBase(BaseModel):
 class ProjectCreate(ProjectBase):
     owner_id: int
 
+class ProjectUpdate(ProjectBase):
+    title: Optional[str] = None
+    description: Optional[str] = None
+    owner_id: Optional[int] = None
+
 class ProjectResponse(ProjectBase):
     id: int
     owner_id: int

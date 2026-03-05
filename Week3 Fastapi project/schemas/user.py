@@ -1,5 +1,5 @@
 from pydantic import BaseModel, EmailStr
-
+from typing import Optional
 class UserBase(BaseModel):
     username: str
     email: EmailStr
@@ -8,7 +8,11 @@ class UserBase(BaseModel):
 class UserCreate(UserBase):
     pass
 class UserUpdate(UserBase):
-   pass
+   username :  Optional[str] = None
+   email: Optional[EmailStr] = None
+   is_active: Optional[bool] = True
+
+
 class UserResponse(UserBase):
     id: int
 

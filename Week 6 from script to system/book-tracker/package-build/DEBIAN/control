@@ -1,0 +1,7 @@
+Package: book-tracker
+Version: 1.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: Abdullah
+Description: Book Tracker Web Scraping API Service

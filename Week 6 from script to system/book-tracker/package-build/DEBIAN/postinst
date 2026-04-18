@@ -1,0 +1,10 @@
+#!/bin/bash
+
+apt update
+apt install -y python3 python3-pip
+
+pip3 install fastapi uvicorn sqlalchemy psycopg2-binary requests beautifulsoup4
+
+systemctl daemon-reload
+systemctl enable book-tracker
+systemctl restart book-tracker

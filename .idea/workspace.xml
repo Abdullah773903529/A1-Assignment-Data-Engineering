@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f03d4dea-fd71-4c2a-8a6a-40b3882d07e3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ahmed Elsaid DWH Assignment/Document DWH/DWH  Document .docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ahmed Elsaid DWH Assignment/Document DWH/DWH  Document .pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ahmed Elsaid DWH Assignment/exportSqllite/cleandata.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ahmed Elsaid Assignment/nifi-assignment/data_input/data_1777963011.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ahmed Elsaid Assignment/nifi-assignment/data_input/data_1777963016.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ahmed Elsaid Assignment/nifi-assignment/data_input/data_1777963021.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ahmed Elsaid Assignment/nifi-assignment/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ahmed Elsaid Assignment/nifi-assignment/scripts/generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ahmed Elsaid Assignment/nifi-assignment/scripts/generator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,18 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Abdullah773903529"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Abdullah773903529&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Abdullah773903529/A1-Data-Cleaning-For-cafe-sales.git",
-    "accountId": "364ca8e6-521d-4818-a4a3-711999d9b5fb"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Abdullah773903529/A1-Data-Cleaning-For-cafe-sales.git&quot;,
+    &quot;accountId&quot;: &quot;364ca8e6-521d-4818-a4a3-711999d9b5fb&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -43,18 +47,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.generator.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Admin/Desktop/A1 Assignment"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.generator.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/A1 Assignment&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="generator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="A1 Assignment" />

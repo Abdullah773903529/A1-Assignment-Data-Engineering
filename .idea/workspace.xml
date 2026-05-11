@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f03d4dea-fd71-4c2a-8a6a-40b3882d07e3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ahmed Elsaid Assignment/nifi-assignment/data_input/data_1777963011.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ahmed Elsaid Assignment/nifi-assignment/data_input/data_1777963016.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ahmed Elsaid Assignment/nifi-assignment/data_input/data_1777963021.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ahmed Elsaid Assignment/nifi-assignment/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ahmed Elsaid Assignment/nifi-assignment/scripts/generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ahmed Elsaid Assignment/nifi-assignment/scripts/generator.py" afterDir="false" />
-    </list>
+    <list default="true" id="f03d4dea-fd71-4c2a-8a6a-40b3882d07e3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
